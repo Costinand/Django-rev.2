@@ -18,7 +18,9 @@ from django.contrib import admin
 from django.urls import path
 # from task2.views import index, Index2
 # from task3.views import platform, games, cart
-from task4.views import platform, games, cart
+# from task4.views import platform, games, cart
+from task5.views import  sign_up_by_html, sign_up_by_django
+
 
 # urlpatterns = [                                               # task2
 #     path('admin/', admin.site.urls),
@@ -26,9 +28,15 @@ from task4.views import platform, games, cart
 #     path('2/', Index2.as_view())
 # ]
 
-urlpatterns = [                                                  # task3
+# urlpatterns = [                                                  # task3
+#     path('admin/', admin.site.urls),
+#     path('', platform, name='platform'),
+#     path('games/', games, name='games'),
+#     path('cart/', cart, name='cart')
+# ]
+
+urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', platform, name='platform'),
-    path('games/', games, name='games'),
-    path('cart/', cart, name='cart')
+    path('',  sign_up_by_html),
+    path('2/', sign_up_by_django),
 ]
